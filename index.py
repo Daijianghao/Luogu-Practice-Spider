@@ -1,4 +1,6 @@
 import requests
+import sys
+import io
 import os
 uid=int(input())
 url='https://www.luogu.com.cn/user/'+str(uid)+'?_contentOnly'
@@ -24,31 +26,52 @@ class stats:
 if passed:
     stats.hideinfo=True
 
+
 if not os.path.exists(str(uid)):
         os.makedirs(str(uid))
-f=open(str(uid)+'/accepted_list.txt','w')
-f.write('\"Accepted_number\":'+str(stats.passed_num)+'\n')
-f.write('list=[')
-for i in range(len(passed)):
-    f.write(str(passed[i]['pid']))
-    if not i==len(passed)-1:
-        f.write(',')
-f.write(']\n')
-f.close()
-
-f=open(str(uid)+'/accepted_detail.txt','w')
-for i in range(len(passed)):
-    #f.write(str('['+passed[i]['pid']+' '+passed[i]['title']+']').encode('utf-8').decode('unicode_escape'))
-    #print(str('['+passed[i]['pid']+' '+passed[i]['title']+']'))
-    f.write(str('['+passed[i]['pid']+' '+passed[i]['title']+']'+'\n'))
-f.close()
-
-f=open(str(uid)+'/accepted_dict.json','w')
+f=open(str(uid)+'/accepted_list.json','w',encoding='utf-8')
 f.write('{\n')
-f.write('\"problems\":[\n')
-for i in range(len(passed)):
-    f.write('{\"pid\":\"'+passed[i]['pid']+'\",\"title\":\"'+passed[i]['title']+'\"}')
-    if not i==len(passed)-1:
+f.write('    \"Accepted_number\": '+str(stats.passed_num)+',\n')
+f.write('    \"list\": [')
+for i in range(stats.passed_num):
+    f.write(str('\"'+passed[i]['pid']+'\"'))
+    if not i==stats.passed_num-1:
+        f.write(',')
+f.write(']\n}\n')
+f.close()
+
+f=open(str(uid)+'/accepted_list.txt','w',encoding='utf-8')
+f.write('{\n')
+for i in range(stats.passed_num):
+    f.write(str('['+passed[i]['pid']+']'))
+    if not i==stats.passed_num-1:
+        f.write(',')
+    if (i+1)%10==0:
+        f.write('\n')
+f.write('\n}')
+f.close()
+
+f=open(str(uid)+'/accepted_detail.txt','w',encoding='utf-8')
+for i in range(stats.passed_num):
+    if str(passed[i]['title']).count('\"')==0:    
+        f.write(str('['+passed[i]['pid']+' '+passed[i]['title']+']'))
+    else:
+        f.write(str('['+passed[i]['pid']+' '+'Uknown title]'))
+    if not i==stats.passed_num-1:
         f.write(',')
     f.write('\n')
-f.write(']\n}\n')
+f.close()
+
+f=open(str(uid)+'/accepted_dict.json','w',encoding='utf-8')
+f.write('{\n')
+f.write('    \"problems\":[\n')
+for i in range(stats.passed_num):
+    if str(passed[i]['title']).count('\"')==0:
+        f.write('    {\"pid\":\"'+passed[i]['pid']+'\",\"title\":\"'+passed[i]['title']+'\"}')
+    else:
+        f.write('    {\"pid\":\"'+passed[i]['pid']+'\",\"title\":\"'+'Unknown_title'+'\"}')
+    if not i==stats.passed_num-1:
+        f.write(',')
+    f.write('\n')
+f.write('    ]\n}\n')
+f.close()
