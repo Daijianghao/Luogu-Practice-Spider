@@ -1,3 +1,4 @@
+#define VERSION rc 1.1.0
 import requests
 import sys
 import io
