@@ -8,7 +8,6 @@ head={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
 response = requests.get(url=url,headers=head)
 #out=str(response.text).encode('utf-8').decode('unicode_escape')
 res=response.json()
-#print(res['currentData']['user']['name'])
 user=res['currentData']['user']
 passed=res['currentData']['passedProblems']
 submitted=res['currentData']['submittedProblems']
@@ -64,6 +63,7 @@ f.close()
 
 f=open(str(uid)+'/accepted_dict.json','w',encoding='utf-8')
 f.write('{\n')
+f.write('    \"Accepted_number\": '+str(stats.passed_num)+',\n')
 f.write('    \"problems\":[\n')
 for i in range(stats.passed_num):
     if str(passed[i]['title']).count('\"')==0:
