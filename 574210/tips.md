@@ -2,7 +2,7 @@
 
 截止目前，共通过题目 1318 题。
 
-建议查看 [accepted_dict.json](https://github.com/Daijianghao/Luogu-Practice-Spider/blob/main/574210/accepted_dict.json)
+建议查看 [accepted_dict.json](https://github.com/Daijianghao/Luogu-Practice-Spider/blob/main/574210/accepted_dict.json)。
 
 爬取时间：2022 年 6 月 29 日 17:30。
 
