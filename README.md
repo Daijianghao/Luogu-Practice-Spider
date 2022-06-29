@@ -4,6 +4,11 @@
 
 持续更新中。
 
+#### 开发组名单
+
+| <img src="https://avatars.githubusercontent.com/u/70331183?v=4" width="60px"></br> Huxin
+| :---: |
+| ![](https://shields.io/badge/admin-red?logo=microsoftteams&style=for-the-badge) <br> ![](https://shields.io/badge/Coding-green?logo=visual-studio-code&style=for-the-badge)<br> ![](https://shields.io/badge/BugTester-yellow?logo=open-bug-bounty&style=for-the-badge) <br> ![](https://shields.io/badge/Issues%20Manager-green?logo=visual-studio-code&style=for-the-badge)|
 ---
 
 #### 使用方法
