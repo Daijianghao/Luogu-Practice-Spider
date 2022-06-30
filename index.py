@@ -1,4 +1,4 @@
-#define VERSION rc 1.1.0
+#Version:1.1
 import requests
 import sys
 import io
@@ -9,6 +9,25 @@ head={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
 response = requests.get(url=url,headers=head)
 #out=str(response.text).encode('utf-8').decode('unicode_escape')
 res=response.json()
+
+if not 'passedProblems' in res['currentData']:
+    if not os.path.exists(str(uid)):
+        os.makedirs(str(uid))
+    f=open(str(uid)+'/accepted_list.json','w',encoding='utf-8')
+    f.write('{\n')
+    f.write('    \"Is_getted\": 0,\n')
+    f.write('    \"Accepted_number\": 0,\n')
+    f.write('    \"list\": []\n}\n')
+    f.close()
+    f=open(str(uid)+'/accepted_dict.json','w',encoding='utf-8')
+    f.write('{\n')
+    f.write('    \"Is_getted\": 0,\n')
+    f.write('    \"Accepted_number\": 0,\n')
+    f.write('    \"problems\":[]\n')
+    f.write('}\n')
+    f.close()
+    sys.exit()
+    
 user=res['currentData']['user']
 passed=res['currentData']['passedProblems']
 submitted=res['currentData']['submittedProblems']
@@ -28,9 +47,10 @@ if passed:
 
 
 if not os.path.exists(str(uid)):
-        os.makedirs(str(uid))
+    os.makedirs(str(uid))
 f=open(str(uid)+'/accepted_list.json','w',encoding='utf-8')
 f.write('{\n')
+f.write('    \"Is_getted\": 1,\n')
 f.write('    \"Accepted_number\": '+str(stats.passed_num)+',\n')
 f.write('    \"list\": [')
 for i in range(stats.passed_num):
@@ -64,6 +84,7 @@ f.close()
 
 f=open(str(uid)+'/accepted_dict.json','w',encoding='utf-8')
 f.write('{\n')
+f.write('    \"Is_getted\": 1,\n')
 f.write('    \"Accepted_number\": '+str(stats.passed_num)+',\n')
 f.write('    \"problems\":[\n')
 for i in range(stats.passed_num):
