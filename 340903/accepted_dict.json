@@ -1,4 +1,6 @@
 {
+    "Is_getted": 1,
+    "Accepted_number": 562,
     "problems":[
     {"pid":"AT2348","title":"[ARC070D] HonestOrUnkind"},
     {"pid":"AT2307","title":"[AGC010F] Tree Game"},
