@@ -17,9 +17,9 @@ Download `index.py`.Run it with your method.
 
 Input the user id on Luogu(which is a number)，**It can not obtain the user which is open the mode 'complete privacy' on Luogu**.
 
-If the user which you input haven't open the 'complete privacy',you will get the files as follows in `[uid]/`:
+If the user which you input haven't open the 'complete privacy',you will get the files as follows in `[uid]/accepted`:
 
-#### One. `accepted_list.json`
+#### One. `list.json`
 
 It's a `json` file,accepted problems and accepted problem id of the user in it.
 
@@ -30,7 +30,7 @@ It's a `json` file,accepted problems and accepted problem id of the user in it.
 }
 ```
 
-#### Two. `accepted_list.txt`
+#### Two. `list.txt`
 
 Input the practise like the website on Luogu,which is ten problem in one line.
 
@@ -42,7 +42,7 @@ Input the practise like the website on Luogu,which is ten problem in one line.
 }
 ```
 
-#### Three. `accepted_detail.txt`
+#### Three. `detail.txt`
 
 Write the text which is the problem id and title of a line.
 
@@ -53,7 +53,7 @@ Write the text which is the problem id and title of a line.
 ...
 ```
 
-#### Four. `accepted_dict.json`
+#### Four. `dict.json`
 
 Complete `json` file of the user's practice.
 
