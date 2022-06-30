@@ -1,4 +1,6 @@
 {
+    "Is_getted": 1,
+    "Accepted_number": 31,
     "problems":[
     {"pid":"AT29","title":"ファーストアクセプタンス"},
     {"pid":"B2001","title":"入门测试题目"},
