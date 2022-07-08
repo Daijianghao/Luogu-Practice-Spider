@@ -7,7 +7,7 @@ import os
 class stats:
     uid=0;name='';color='';ccfLevel=0;badge='';passed=[];submitted=[];passedNum=0;unpassedNum=0
 
-class mainPart:
+class mainPart: # 主要函数类
     # ===== 初始化信息 =====
     
     def init():  # 处理 uid
