@@ -26,7 +26,7 @@ class mainPart:
             'User-Agent':\
         'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36',
             'cookie':'_uid=718440;__client_id=e919d1d464a92104e7f5b753b81f3290473ddd98'
-            # 请勿使用此 cookie
+            # 请勿使用此 cookie，否则后果自负
         }
         response=requests.get(url=url,headers=headers)
         
