@@ -15,13 +15,12 @@
 
 #### 使用方法
 
-下载 `index.py` 并运行。
+下载 `main.py` 并运行。
 
-在这之前，您必须安装 `requests` 库。如果您已经配置好了 pip，您需要在终端内输入。
+在这之前，您必须配置 python 环境，并且安装 `requests` 库。
 
-```
-pip install requests
-```
+如果您已经配置好了 pip，您需要在终端内输入 `pip install requests`。
+
 
 运行后输入洛谷用户 uid，**无法获取完全隐藏的用户练习**。
 
