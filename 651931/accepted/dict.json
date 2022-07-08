@@ -1,7 +1,7 @@
 {
-    "Is_getted": 1,
+    "isGetted": true,
     "Accepted_number": 31,
-    "problems":[
+    "problems": [
     {"pid":"AT29","title":"ファーストアクセプタンス"},
     {"pid":"B2001","title":"入门测试题目"},
     {"pid":"CF1060D","title":"Social Circles"},
