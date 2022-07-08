@@ -33,7 +33,8 @@
 
 ```
 {
-    "Accepted_number": 603,
+    "isGetted": true,
+    "acceptedNumber": 603,
     "list": ["P1001","P7866",...]
 }
 ```
@@ -69,7 +70,9 @@
 
 ```
 {
-    "problems":[
+    "isGetted": true,
+    "acceptedNumber": 603,
+    "problems": [
     {"pid":"P1001","title":"A+B Problem"},
     {"pid":"P1002","title":"[NOIP2002 普及组] 过河卒"},
     {"pid":"P1003","title":"[NOIP2011 提高组] 铺地毯"},
