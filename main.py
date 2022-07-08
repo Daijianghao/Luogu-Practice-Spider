@@ -140,24 +140,6 @@ class tools:
             os.makedirs(str(uid))
         if not os.path.exists(str(uid)+'/accepted'):
             os.makedirs(str(uid)+'/accepted')
-    def pureHidden():
-        if not 'passedProblems' in res['currentData']:
-            if not os.path.exists(str(uid)):
-                os.makedirs(str(uid))
-            f=open(str(uid)+'/accepted/list.json','w',encoding='utf-8')
-            f.write('{\n')
-            f.write('    \"Is_getted\": 0,\n')
-            f.write('    \"Accepted_number\": 0,\n')
-            f.write('    \"list\": []\n}\n')
-            f.close()
-            f=open(str(uid)+'/accepted/dict.json','w',encoding='utf-8')
-            f.write('{\n')
-            f.write('    \"Is_getted\": 0,\n')
-            f.write('    \"Accepted_number\": 0,\n')
-            f.write('    \"problems\":[]\n')
-            f.write('}\n')
-            f.close()
-            sys.exit()
 
 if __name__ == '__main__':
     mainPart.main()
