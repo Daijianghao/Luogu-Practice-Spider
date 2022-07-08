@@ -1435,4 +1435,4 @@
 [P8078 [WC2022] 秃子酋长],
 [P8161 [JOI 2022 Final] 自学 (Self Study)],
 [P8164 [JOI 2022 Final] 沙堡 2 (Sandcastle 2)],
-[P8194 [USACO22FEB] Phone Numbers P],
+[P8194 [USACO22FEB] Phone Numbers P]
