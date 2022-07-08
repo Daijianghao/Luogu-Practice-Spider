@@ -6,6 +6,8 @@
 
 持续更新中。
 
+最新版本：[v2.0](https://github.com/Daijianghao/Luogu-Practice-Spider/releases/tag/v2.0)。
+
 #### 开发组名单
 
 | <img src="https://avatars.githubusercontent.com/u/70331183?v=4" width="60px"></br> Huxin
