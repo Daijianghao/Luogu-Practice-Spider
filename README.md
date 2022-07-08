@@ -15,15 +15,14 @@
 
 #### 使用方法
 
-下载 `index.py` 并运行。
+下载 `main.py` 并运行。
 
-在这之前，您必须安装 `requests` 库。如果您已经配置好了 pip，您需要在终端内输入。
+在这之前，您必须配置 python 环境，并且安装 `requests` 库。
 
-```
-pip install requests
-```
+如果您已经配置好了 pip，您需要在终端内输入 `pip install requests`。
 
-运行后输入洛谷用户 uid，**无法获取完全隐藏的用户练习**。
+
+运行后输入洛谷用户 uid，**无法获取完全隐藏用户的详细练习**。
 
 如果对象没开完隐，你将在同目录下 `[uid]/accepted` 得到：
 
@@ -34,7 +33,8 @@ pip install requests
 
 ```
 {
-    "Accepted_number": 603,
+    "isGetted": true,
+    "acceptedNumber": 603,
     "list": ["P1001","P7866",...]
 }
 ```
@@ -66,11 +66,13 @@ pip install requests
 
 最标准的完整 `json` 字典。
 
-当不同格式出现冲突和争议时，建议以此字典为主。
+当不同格式出现冲突或争议时，建议以此字典为主。
 
 ```
 {
-    "problems":[
+    "isGetted": true,
+    "acceptedNumber": 603,
+    "problems": [
     {"pid":"P1001","title":"A+B Problem"},
     {"pid":"P1002","title":"[NOIP2002 普及组] 过河卒"},
     {"pid":"P1003","title":"[NOIP2011 提高组] 铺地毯"},
