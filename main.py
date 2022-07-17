@@ -106,15 +106,15 @@ class mainPart: # 主要函数类
     # ===== 主函数 ======
     
     def main():
-        uidList=mainPart.init()
+        uidList=mainPart.init() # 读入 uid
         for i in range(len(uidList)):
-            tools.dealOS(uidList[i]) # 判断文件夹
-            mainPart.crawl(uidList[i])
-            mainPart.getInfo()
-            mainPart.getListText()
-            mainPart.getListJson()
-            mainPart.getDetailText()
-            mainPart.getDictJson()
+            tools.dealOS(uidList[i]) # 初始化文件夹
+            mainPart.crawl(uidList[i]) # 爬取该用户个人信息
+            mainPart.getInfo() # 将爬取内容转换为内部变量
+            mainPart.getListText() # 输出 list.txt
+            mainPart.getListJson() # 输出 list.json
+            mainPart.getDetailText() # 输出 detail.txt
+            mainPart.getDictJson() # 输出 dict.json
 
 class tools:
     # ===== 一些工具函数 =====
