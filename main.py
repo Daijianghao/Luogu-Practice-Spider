@@ -1,4 +1,5 @@
-#Version: 2.0
+# Version: 2.1
+# Author: Huxin
 import requests
 import sys
 import io
@@ -11,15 +12,16 @@ class mainPart: # 主要函数类
     # ===== 初始化信息 =====
     
     def init():  # 处理 uid
-        global uid
         try:
-            uid=int(input('Please input the user id in Luogu: '))
+            uid=input('Please input the user id in Luogu: ').split()
+            for i in range(len(uid)):
+                uid[i]=int(uid[i])
+            return uid
         except:
             print('Please input the correct uid!')
             sys.exit()
-        tools.dealOS() # 判断文件夹
     
-    def crawl(): # 爬取用户信息
+    def crawl(uid): # 爬取用户信息
         global response
         url='https://www.luogu.com.cn/user/'+str(uid)+'?_contentOnly'
         headers={
@@ -42,7 +44,7 @@ class mainPart: # 主要函数类
             stats.hideInfo=True
         else:
             stats.hideInfo=False
-        stats.uid=uid
+        stats.uid=int(stats.user['uid'])
         stats.name=stats.user['name']
         stats.color=stats.user['color']
         stats.ccfLevel=stats.user['ccfLevel']
@@ -92,7 +94,7 @@ class mainPart: # 主要函数类
         f=open(str(stats.uid)+'/accepted/dict.json','w',encoding='utf-8')
         f.write('{\n')
         f.write(tools.isGetted())     # "isGetted": true/false,
-        f.write('    \"Accepted_number\": '+str(stats.passedNum)+',\n')     # 通过数量
+        f.write('    \"acceptedNumber\": '+str(stats.passedNum)+',\n')     # 通过数量
         f.write('    \"problems\": [\n')     # 建立 problem 列表
         for i in range(len(stats.passed)):     # 完隐用户无法获取，即 len(stats.passed)=0
             f.write('    {\"pid\":\"'+stats.passed[i]['pid']+'\",\"title\":\"'+\
@@ -104,13 +106,15 @@ class mainPart: # 主要函数类
     # ===== 主函数 ======
     
     def main():
-        mainPart.init()
-        mainPart.crawl()
-        mainPart.getInfo()
-        mainPart.getListText()
-        mainPart.getListJson()
-        mainPart.getDetailText()
-        mainPart.getDictJson()
+        uidList=mainPart.init()
+        for i in range(len(uidList)):
+            tools.dealOS(uidList[i]) # 判断文件夹
+            mainPart.crawl(uidList[i])
+            mainPart.getInfo()
+            mainPart.getListText()
+            mainPart.getListJson()
+            mainPart.getDetailText()
+            mainPart.getDictJson()
 
 class tools:
     # ===== 一些工具函数 =====
@@ -135,7 +139,7 @@ class tools:
             return '\n'
         else:
             return ''
-    def dealOS(): # 判断 /uid/accepted 文件夹是否存在并建立
+    def dealOS(uid): # 判断 /uid/accepted 文件夹是否存在并建立
         if not os.path.exists(str(uid)):
             os.makedirs(str(uid))
         if not os.path.exists(str(uid)+'/accepted'):
@@ -143,4 +147,3 @@ class tools:
 
 if __name__ == '__main__':
     mainPart.main()
-
