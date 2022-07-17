@@ -137,7 +137,7 @@ class tools:
     def isNewline(x): # 返回当前状态下，是否需要换行（仅用于 list.txt）
         if (x+1)%10==0: # 十个一行
             return '\n'
-        else:
+        else: # 非结尾，不需要换行
             return ''
     def dealOS(uid): # 判断 /uid/accepted 文件夹是否存在并建立
         if not os.path.exists(str(uid)):
