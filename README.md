@@ -8,7 +8,7 @@
 
 持续更新中。
 
-最新版本：[v2.0](https://github.com/Daijianghao/Luogu-Practice-Spider/releases/tag/v2.0)。
+最新版本：[v2.1](https://github.com/Daijianghao/Luogu-Practice-Spider/releases/tag/v2.1)。
 
 [English](https://github.com/Daijianghao/Luogu-Practice-Spider/blob/main/README.en-Hans.md) | **简体中文**
 
@@ -94,4 +94,4 @@
 + 也可爬取同学/老师的练习记录，差缺不漏，一起进步。
 + 比较情况示例可于 [新版本 PR](https://github.com/Daijianghao/Luogu-Practice-Spider/pull/4/files) 中展开查看。
 
-[![jfmWqO.png](https://s1.ax1x.com/2022/07/14/jfmWqO.png)](https://imgtu.com/i/jfmWqO)
+[![jIizkj.png](https://s1.ax1x.com/2022/07/17/jIizkj.png)](https://imgtu.com/i/jIizkj)
