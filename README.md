@@ -12,6 +12,8 @@
 
 [English](https://github.com/Daijianghao/Luogu-Practice-Spider/blob/main/README.en-Hans.md) | **简体中文**
 
+觉得有用的话，请给一个免费的 Star 哦（可爱。
+
 #### 开发组名单
 
 | <img src="https://avatars.githubusercontent.com/u/70331183?v=4" width="60px"></br> Huxin
