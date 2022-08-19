@@ -8,7 +8,7 @@
 
 持续更新中。
 
-最新版本：[v2.1](https://github.com/Daijianghao/Luogu-Practice-Spider/releases/tag/v2.1)。
+最新版本：[v2.2](https://github.com/Daijianghao/Luogu-Practice-Spider/releases/tag/v2.2)。
 
 [English](https://github.com/Daijianghao/Luogu-Practice-Spider/blob/main/README.en-Hans.md) | **简体中文**
 
@@ -29,10 +29,9 @@
 
 如果您已经配置好了 pip，您需要在终端内输入 `pip install requests`。
 
+运行后输入洛谷用户 uid，注意 **无法获取完全隐藏用户的详细练习**。
 
-运行后输入洛谷用户 uid，**无法获取完全隐藏用户的详细练习**。
-
-如果对象没开完隐，你将在同目录下 `[uid]/accepted` 得到：
+若爬取对象没开完隐，你将在同目录下 `[uid]/accepted` 得到：
 
 
 #### 一、 `list.json`
