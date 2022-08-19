@@ -31,7 +31,7 @@ If you have configured pip, you need to enter `pip install requests` in the term
 
 After running, enter the user uid of Luogu. Note that **the detailed practice of completely hiding the user cannot be obtained**.
 
-If the crawled object is not fully hidden, you will get `[uid]/accepted` in the same directory:
+If the crawled object is not fully hidden, you will get the following things in the same directory of `[uid]/accepted` :
 
 #### One. `list.json`
 
