@@ -1,8 +1,18 @@
 ### Luogu-Practice-Spider 洛谷练习爬虫
 
-Crawling the practice list on the user on Luogu.
+——Know yourself and know your enemy, and be in the palm of your hand.
 
-It's updating.
+Crawling user's practice on Luogu.
+
+**Please use this script reasonably. I am not responsible for the consequences.**
+
+Ongoing update.
+
+Lastest version: [v2.2](https://github.com/Daijianghao/Luogu-Practice-Spider/releases/tag/v2.2)。
+
+**English** | [简体中文](https://github.com/Daijianghao/Luogu-Practice-Spider/blob/Ver-2.2/README.md)
+
+If you find it useful, please give me a free star, thanks \>\_\<.
 
 #### Development team list
 
@@ -15,13 +25,17 @@ It's updating.
 
 Download `index.py`.Run it with your method.
 
-Input the user id on Luogu(which is a number)，**It can not obtain the user which is open the mode 'complete privacy' on Luogu**.
+Before that, you must configure the python environment and install the `requests` library.
 
-If the user which you input haven't open the 'complete privacy',you will get the files as follows in `[uid]/accepted`:
+If you have configured pip, you need to enter `pip install requests` in the terminal.
+
+After running, enter the user uid of Luogu. Note that **the detailed practice of completely hiding the user cannot be obtained**.
+
+If the crawled object is not fully hidden, you will get `[uid]/accepted` in the same directory:
 
 #### One. `list.json`
 
-It's a `json` file,accepted problems and accepted problem id of the user in it.
+It's a `json` file, accepted problems and accepted problem id of the user in it.
 
 ```
 {
@@ -32,7 +46,7 @@ It's a `json` file,accepted problems and accepted problem id of the user in it.
 
 #### Two. `list.txt`
 
-Input the practise like the website on Luogu,which is ten problem in one line.
+Output the practise like the practice website on Luogu, which is ten problem in one line.
 
 ```
 {
@@ -57,6 +71,8 @@ Write the text which is the problem id and title of a line.
 
 Complete `json` file of the user's practice.
 
+In case of conflict or dispute between different formats, it is recommended to use this dictionary as the main one.
+
 ```
 {
     "problems":[
@@ -68,3 +84,14 @@ Complete `json` file of the user's practice.
     ]
 }
 ```
+
+#### Five. Main purpose:
+
++ You can crawl your own practice every other week / month to compare, understand and supervise yourself.
+
++ You can also crawl through the practice records of your classmates / teachers to find out what is missing and make progress together.
+
++ Examples of comparison can be expanded and viewed in [the new version of PR](https://github.com/Daijianghao/Luogu-Practice-Spider/pull/4/files).
+
+[![jIizkj.png](https://s1.ax1x.com/2022/07/17/jIizkj.png)](https://imgtu.com/i/jIizkj)
+
