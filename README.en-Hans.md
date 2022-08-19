@@ -23,7 +23,7 @@ If you find it useful, please give me a free star, thanks \>\_\<.
 
 #### How to use it
 
-Download `index.py`.Run it with your method.
+Download `index.py`. Run it with your method.
 
 Before that, you must configure the python environment and install the `requests` library.
 
