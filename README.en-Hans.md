@@ -13,7 +13,7 @@ It's updating.
 
 #### How to use it
 
-Download `index.py`.Run it with your method.
+Download `main.py`.Run it with your method.
 
 Input the user id on Luogu(which is a number)，**It can not obtain the user which is open the mode 'complete privacy' on Luogu**.
 
