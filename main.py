@@ -1,4 +1,4 @@
-# Version: 2.1
+# Version: 2.2
 # Author: Huxin
 import requests
 import sys
@@ -65,7 +65,7 @@ class mainPart: # 主要函数类
         f=open(str(stats.uid)+'/accepted/list.json','w',encoding='utf-8')
         f.write('{\n')
         f.write(tools.isGetted())
-        f.write('    \"acceptedNumber\": '+str(stats.passedNum)+',\n')
+        f.write('    \"acceptedNumber\": '+str(len(stats.passed))+',\n')
         f.write('    \"list\": [')
         for i in range(len(stats.passed)):
             f.write(str('\"'+stats.passed[i]['pid']+'\"'))
@@ -94,7 +94,7 @@ class mainPart: # 主要函数类
         f=open(str(stats.uid)+'/accepted/dict.json','w',encoding='utf-8')
         f.write('{\n')
         f.write(tools.isGetted())     # "isGetted": true/false,
-        f.write('    \"acceptedNumber\": '+str(stats.passedNum)+',\n')     # 通过数量
+        f.write('    \"acceptedNumber\": '+str(len(stats.passed))+',\n')     # 通过数量
         f.write('    \"problems\": [\n')     # 建立 problem 列表
         for i in range(len(stats.passed)):     # 完隐用户无法获取，即 len(stats.passed)=0
             f.write('    {\"pid\":\"'+stats.passed[i]['pid']+'\",\"title\":\"'+\
@@ -130,7 +130,7 @@ class tools:
         else:
             return '    \"isGetted\": true,\n'
     def isComma(x): # 返回当前状态下，是否需要输出逗号
-        if x!=stats.passedNum-1:
+        if x!=len(stats.passed)-1:
             return ','
         else:
             return ''
