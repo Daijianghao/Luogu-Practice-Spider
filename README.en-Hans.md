@@ -69,7 +69,7 @@ Output the text with the problem number and problem title. One line for each pro
 
 #### Four. `dict.json`
 
-Complete `json` file of the user's practice.
+The most standard complete`json` dictionary.
 
 In case of conflict or dispute between different formats, it is recommended to use this dictionary as the main one.
 
