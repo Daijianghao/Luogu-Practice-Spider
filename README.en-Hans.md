@@ -58,7 +58,7 @@ Output the practise like the practice website on Luogu, which is ten problem in 
 
 #### Three. `detail.txt`
 
-Output the text which is the problem id and title of a line.
+Output the text with the problem number and problem title. One line for each problem.
 
 ```
 [P1001 A+B Problem],
