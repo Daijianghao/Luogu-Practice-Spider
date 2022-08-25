@@ -94,6 +94,6 @@ In case of conflict or dispute between different formats, it is recommended to u
 
 + You can also crawl through the practice records of your classmates / teachers to find out what is missing and make progress together.
 
-+ Examples of comparison can be expanded and viewed in [version 2.0 of PR](https://github.com/Daijianghao/Luogu-Practice-Spider/pull/4/files).
++ Examples of comparison can be expanded and viewed in the [PR of version 2.0](https://github.com/Daijianghao/Luogu-Practice-Spider/pull/4/files).
 
 [![jIizkj.png](https://s1.ax1x.com/2022/07/17/jIizkj.png)](https://imgtu.com/i/jIizkj)
