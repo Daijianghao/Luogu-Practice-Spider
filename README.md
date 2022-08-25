@@ -93,6 +93,6 @@
 
 + 可每隔一周/一月爬取一次自己的练习情况，进行比对，了解并督促自己。
 + 也可爬取同学/老师的练习记录，查缺补漏，一起进步。
-+ 比较情况示例可于 [新版本 PR](https://github.com/Daijianghao/Luogu-Practice-Spider/pull/4/files) 中展开查看。
++ 比较情况示例可于 [V2.0 PR](https://github.com/Daijianghao/Luogu-Practice-Spider/pull/4/files) 中展开查看。
 
 [![jIizkj.png](https://s1.ax1x.com/2022/07/17/jIizkj.png)](https://imgtu.com/i/jIizkj)
