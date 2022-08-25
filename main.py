@@ -26,9 +26,7 @@ class mainPart: # 主要函数类
         url='https://www.luogu.com.cn/user/'+str(uid)+'?_contentOnly'
         headers={
             'User-Agent':\
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36',
-            'cookie':'_uid=718440;__client_id=e919d1d464a92104e7f5b753b81f3290473ddd98'
-            # 请勿在其他用途使用此 cookie，否则后果自负
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
         }
         response=requests.get(url=url,headers=headers)
         
