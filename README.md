@@ -8,7 +8,7 @@
 
 持续更新中。
 
-最新版本：[v2.1](https://github.com/Daijianghao/Luogu-Practice-Spider/releases/tag/v2.1)。
+最新版本：[v2.2](https://github.com/Daijianghao/Luogu-Practice-Spider/releases/tag/v2.2)。
 
 [English](https://github.com/Daijianghao/Luogu-Practice-Spider/blob/main/README.en-Hans.md) | **简体中文**
 
@@ -29,10 +29,9 @@
 
 如果您已经配置好了 pip，您需要在终端内输入 `pip install requests`。
 
+运行后输入洛谷用户 uid，注意 **无法获取完全隐藏用户的详细练习**。
 
-运行后输入洛谷用户 uid，**无法获取完全隐藏用户的详细练习**。
-
-如果对象没开完隐，你将在同目录下 `[uid]/accepted` 得到：
+若爬取对象没开完隐，你将在同目录下 `[uid]/accepted` 得到：
 
 
 #### 一、 `list.json`
@@ -49,7 +48,7 @@
 
 #### 二、 `list.txt`
 
-输出类似于洛谷练习情况的文本文档。十个题号一换行。
+输出类似于洛谷练习情况的文本文档，十个题号一换行。
 
 ```
 {
@@ -61,7 +60,7 @@
 
 #### 三、 `detail.txt`
 
-输出带题号和题目名称的文本文档。一题一行。
+输出带题号和题目名称的文本文档，一题一行。
 
 ```
 [P1001 A+B Problem],
@@ -94,6 +93,6 @@
 
 + 可每隔一周/一月爬取一次自己的练习情况，进行比对，了解并督促自己。
 + 也可爬取同学/老师的练习记录，查缺补漏，一起进步。
-+ 比较情况示例可于 [新版本 PR](https://github.com/Daijianghao/Luogu-Practice-Spider/pull/4/files) 中展开查看。
++ 比较情况示例可于 [V2.0 PR](https://github.com/Daijianghao/Luogu-Practice-Spider/pull/4/files) 中展开查看。
 
 [![jIizkj.png](https://s1.ax1x.com/2022/07/17/jIizkj.png)](https://imgtu.com/i/jIizkj)

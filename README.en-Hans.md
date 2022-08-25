@@ -1,8 +1,18 @@
 ### Luogu-Practice-Spider 洛谷练习爬虫
 
-Crawling the practice list on the user on Luogu.
+——Know yourself and your enemy as well. Let everything under control.
 
-It's updating.
+Crawling user's practice on Luogu.
+
+**Please use this script reasonably. I won't be responsible for the consequences caused.**
+
+Keep updating.
+
+Lastest version: [v2.2](https://github.com/Daijianghao/Luogu-Practice-Spider/releases/tag/v2.2)。
+
+**English** | [简体中文](https://github.com/Daijianghao/Luogu-Practice-Spider/blob/main/README.md)
+
+If you find it useful, please give me a free star, thanks \>\_\<.
 
 #### Development team list
 
@@ -13,26 +23,31 @@ It's updating.
 
 #### How to use it
 
-Download `main.py`.Run it with your method.
+Download `main.py`. Run it with your method.
 
-Input the user id on Luogu(which is a number)，**It can not obtain the user which is open the mode 'complete privacy' on Luogu**.
+Before running, you must configure the python environment and install the `requests` library.
 
-If the user which you input haven't open the 'complete privacy',you will get the files as follows in `[uid]/accepted`:
+If you have configured pip, you need to enter `pip install requests` in the terminal.
+
+After running, please enter the user's uid on Luogu. Note that **you have no access to detailed practice from completely hidden users**.
+
+If the crawled object is not completely hidden, you will get the following things in the same directory of `[uid]/accepted` :
 
 #### One. `list.json`
 
-It's a `json` file,accepted problems and accepted problem id of the user in it.
+It's a `json` file, outputting the number of accepted problems and the problem id of the user.
 
 ```
 {
-    "Accepted_number": 603,
+    "isGetted": true,
+    "acceptedNumber": 603,
     "list": ["P1001","P7866",...]
 }
 ```
 
 #### Two. `list.txt`
 
-Input the practise like the website on Luogu,which is ten problem in one line.
+Output the text similiar to the practice website on Luogu, with one line for ten problems.
 
 ```
 {
@@ -44,7 +59,7 @@ Input the practise like the website on Luogu,which is ten problem in one line.
 
 #### Three. `detail.txt`
 
-Write the text which is the problem id and title of a line.
+Output a text with the problem number and problem title. One line for each problem.
 
 ```
 [P1001 A+B Problem],
@@ -55,11 +70,15 @@ Write the text which is the problem id and title of a line.
 
 #### Four. `dict.json`
 
-Complete `json` file of the user's practice.
+The most standard complete `json` dictionary.
+
+In case of conflict or dispute between different formats, it is recommended to use this dictionary as the main one.
 
 ```
 {
-    "problems":[
+    "isGetted": true,
+    "acceptedNumber": 603,
+    "problems": [
     {"pid":"P1001","title":"A+B Problem"},
     {"pid":"P1002","title":"[NOIP2002 普及组] 过河卒"},
     {"pid":"P1003","title":"[NOIP2011 提高组] 铺地毯"},
@@ -68,3 +87,13 @@ Complete `json` file of the user's practice.
     ]
 }
 ```
+
+#### Five. Main purpose:
+
++ You can crawl your own practice every other week / month to compare, understand and supervise yourself.
+
++ You can also crawl through the practice records of your classmates / teachers to find out what is missing and make progress together.
+
++ Examples of comparison can be expanded and viewed in the [PR of version 2.0](https://github.com/Daijianghao/Luogu-Practice-Spider/pull/4/files).
+
+[![jIizkj.png](https://s1.ax1x.com/2022/07/17/jIizkj.png)](https://imgtu.com/i/jIizkj)
